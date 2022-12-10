@@ -1,0 +1,68 @@
+<div class="flex h-screen w-full justify-center items-center bg-gradient-to-br from-red-200 to-red-700">
+  <div class="login-form">
+    <div>
+      <img
+        class="mx-auto h-40 w-auto"
+        alt=""
+        src="assets/images/logo.jpg"
+        width="170px"
+      />
+    </div>
+    <div class="mt-10">
+      <form nz-form class="my-10 space-y-6" (ngSubmit)="submitForm()" [formGroup]="registerForm">
+        <div>
+          <div class="space-y-6">
+            <nz-form-item>
+              <nz-form-control nzErrorTip="Please input your firstname!">
+                <nz-input-group nzPrefixIcon="user">
+                  <input formControlName="firstname" nz-input placeholder="Firstname"
+                         type="text"/>
+                </nz-input-group>
+              </nz-form-control>
+            </nz-form-item>
+          </div>
+          <div class="space-y-6">
+            <nz-form-item>
+              <nz-form-control nzErrorTip="Please input your lastname!">
+                <nz-input-group nzPrefixIcon="user">
+                  <input formControlName="lastname" nz-input placeholder="Lastname"
+                         type="text"/>
+                </nz-input-group>
+              </nz-form-control>
+            </nz-form-item>
+          </div>
+          <div class="space-y-6">
+            <nz-form-item>
+              <nz-form-control nzErrorTip="Please input your username!">
+                <nz-input-group nzPrefixIcon="user">
+                  <input formControlName="username" nz-input placeholder="Username"
+                         type="text"/>
+                </nz-input-group>
+              </nz-form-control>
+            </nz-form-item>
+          </div>
+          <div class="space-y-6">
+            <nz-form-item>
+              <nz-form-control nzErrorTip="Please input your email!">
+                <nz-input-group nzPrefixIcon="email">
+                  <input formControlName="email" nz-input placeholder="email"
+                         type="text"/>
+                </nz-input-group>
+              </nz-form-control>
+            </nz-form-item>
+          </div>
+            <nz-form-item>
+              <nz-form-control nzErrorTip="Please input your Password!">
+                <nz-input-group nzPrefixIcon="lock">
+                  <input formControlName="password" nz-input placeholder="Password" type="password"/>
+                </nz-input-group>
+              </nz-form-control>
+            </nz-form-item>
+          </div>
+        <div>
+          <button nz-button class="w-full mt-4" [nzType]="'primary'"  [disabled]="!registerForm.valid">signUp</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,45 @@
+<div class="flex h-screen w-full justify-center items-center bg-gradient-to-br from-red-200 to-red-700">
+  <div class="login-form">
+    <div>
+      <img
+        class="mx-auto h-40 w-auto"
+        alt=""
+        src="assets/images/logo.jpg"
+        width="170px"
+      />
+    </div>
+    <div class="mt-10">
+      <form nz-form class="mt-8 space-y-6" (ngSubmit)="submitForm()" [formGroup]="validateForm">
+        <div >
+            <nz-form-item>
+              <nz-form-control  nzErrorTip="Please input your username!" >
+                <nz-input-group nzPrefixIcon="user" >
+                  <input formControlName="userName" nz-input placeholder="Username"
+                         type="text"/>
+                </nz-input-group>
+              </nz-form-control>
+            </nz-form-item>
+
+            <nz-form-item>
+              <nz-form-control  nzErrorTip="Please input your Password!">
+                <nz-input-group nzPrefixIcon="lock">
+                  <input formControlName="password" nz-input placeholder="Password" type="password"/>
+                </nz-input-group>
+              </nz-form-control>
+            </nz-form-item>
+          </div>
+        <div>
+          <button nz-button class="w-full mt-4" [nzType]="'primary'" [disabled]="!validateForm.valid" >Log in</button>
+        </div>
+        <div class="flex items-center justify-center mt-4">
+          <div class="text-sm">
+            Or
+            <a [routerLink]="['/signUp']" class="font-medium text-red-600 hover:text-red-500">
+              signUp now!
+            </a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

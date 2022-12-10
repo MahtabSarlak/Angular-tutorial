@@ -1,0 +1,54 @@
+<!--<nav-->
+<!--  class="md:left-0 md:block md:fixed md:top-0 md:bottom-0 md:overflow-y-auto md:flex-row md:flex-nowrap md:overflow-hidden shadow-xl bg-white flex flex-wrap items-center justify-between relative md:w-64 z-10 py-4 px-6"-->
+<!--&gt;-->
+<!--  <div-->
+<!--    class="md:flex-col md:items-stretch md:min-h-full md:flex-nowrap px-0 flex flex-wrap items-center justify-between w-full mx-auto"-->
+<!--  >-->
+<!--    &lt;!&ndash; Brand &ndash;&gt;-->
+<!--    <a-->
+<!--      class="md:block text-left md:pb-2 text-blueGray-600 mr-0 inline-block whitespace-nowrap text-sm uppercase font-bold p-4 px-0"-->
+<!--      href="javascript:void(0)"-->
+<!--    >-->
+<!--      Tailwind Starter Kit-->
+<!--    </a>-->
+<!--  </div>-->
+<!--</nav>-->
+
+<nz-sider nzCollapsible nzWidth="200px">
+  <div class=" mt-2">
+    <img
+      class="mx-auto h-20 w-auto"
+      alt=""
+      src="assets/images/logo.jpg"
+      width="150px"
+    />
+  </div>
+  <ul nz-menu nzTheme="dark" nzMode="inline">
+    <li nz-menu-item>
+      <span nz-icon nzType="pie-chart"></span>
+      <span>Option 1</span>
+    </li>
+    <li nz-menu-item>
+      <span nz-icon nzType="desktop"></span>
+      <span>Option 2</span>
+    </li>
+    <li nz-submenu nzTitle="User" nzIcon="user">
+      <ul>
+        <li nz-menu-item>Tom</li>
+        <li nz-menu-item>Bill</li>
+        <li nz-menu-item>Alex</li>
+      </ul>
+    </li>
+    <li nz-submenu nzTitle="Team" nzIcon="team">
+      <ul>
+        <li nz-menu-item>Team 1</li>
+        <li nz-menu-item>Team 2</li>
+      </ul>
+    </li>
+    <li nz-menu-item>
+      <span nz-icon nzType="file"></span>
+      <span>File</span>
+    </li>
+  </ul>
+</nz-sider>
+
